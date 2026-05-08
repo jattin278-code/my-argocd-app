@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
         - name: music-player-app
-          image: nginx:latest
+          image: jattin11/music-player:v1
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
