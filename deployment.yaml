@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-app
+  name: music-player-app
 spec:
-  replicas: 4
+  replicas: 2
   selector:
     matchLabels:
-      app: nginx-app
+      app: music-player-app
   template:
     metadata:
       labels:
-        app: nginx-app
+        app: music-player-app
     spec:
       containers:
-      - name: nginx
-        image: nginx:latest
-        ports:
-        - containerPort: 80
+        - name: music-player-app
+          image: nginx:latest
+          ports:
+            - containerPort: 80
